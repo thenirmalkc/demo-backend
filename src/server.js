@@ -9,3 +9,5 @@ const PORT = process.env.PORT;
 app.listen(PORT, HOST, () => {
   console.log('Listening on -> ' + HOST + ':' + PORT);
 });
+
+console.log('test');
