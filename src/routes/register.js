@@ -2,7 +2,7 @@
 
 const router = require('express').Router();
 const controller = require('../controllers/register');
-const { generateWebTokens } = require('../controllers/token');
+const { generateWebTokens } = require('../middlewares/auth');
 
 router.post('/', controller.registerUser, generateWebTokens);
 

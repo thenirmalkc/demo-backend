@@ -1,8 +1,8 @@
 'use strict';
 
 const router = require('express').Router();
-const controller = require('../controllers/token');
+const { refreshWebTokens } = require('../middlewares/auth');
 
-router.get('/refresh', controller.refreshWebTokens);
+router.get('/refresh', refreshWebTokens);
 
 module.exports = router;

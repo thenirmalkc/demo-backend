@@ -3,7 +3,6 @@
 const mongoose = require('mongoose');
 
 exports.Not_Found = function (req, res) {
-  console.log('here');
   res.status(404).json({ msg: 'Not Found' });
 };
 
