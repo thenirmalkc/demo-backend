@@ -13,10 +13,6 @@ const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET;
 const exp2 = { expiresIn: 300 }; // access token expire time
 // -- --
 
-exports.ADMIN = 'ADMIN';
-exports.SUPER_ADMIN = 'SUPER_ADMIN';
-exports.USER = 'USER';
-
 exports.Auth = (...roles) => {
   return function (req, res, next) {
     if (!req.headers.authorization)
@@ -68,6 +64,7 @@ exports.generateWebTokens = async (req, res) => {
           exp2,
           function (error, token) {
             tokens.accessToken = token;
+            console.log(tokens);
             res.status(200).json(tokens);
           }
         );

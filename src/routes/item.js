@@ -3,7 +3,8 @@
 const router = require('express').Router();
 const model = require('../models/index');
 const controller = require('../controllers/item');
-const { Auth, USER } = require('../middlewares/auth'); // Authorization
+const { Auth } = require('../middlewares/auth'); // Authorization
+const { USER } = require('../utils/role');
 const {
   Valid_Id,
   Doc_Exists,

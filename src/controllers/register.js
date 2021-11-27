@@ -2,7 +2,7 @@
 
 const model = require('../models/index');
 const formatError = require('../utils/formatError');
-const { USER } = require('../middlewares/auth');
+const { USER } = require('../utils/role');
 
 exports.registerUser = async (req, res, next) => {
   try {
