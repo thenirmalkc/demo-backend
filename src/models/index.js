@@ -3,20 +3,11 @@
 const mongoose = require('mongoose');
 const fs = require('fs');
 
-const DB_USER = process.env.DB_USER;
-const DB_PASS = process.env.DB_PASS;
-const DB_NAME = process.env.DB_NAME;
+// Database URL
+const DB_URL = process.env.DB_URL;
 
 // Connecting to MongoDB Atlas
-const url =
-  'mongodb+srv://' +
-  DB_USER +
-  ':' +
-  DB_PASS +
-  '@cluster0.5sucp.mongodb.net/' +
-  DB_NAME +
-  '?retryWrites=true&w=majority';
-mongoose.connect(url);
+mongoose.connect(DB_URL);
 const db = mongoose.connection;
 
 db.on('error', () => console.log('Database connection error !!'));
