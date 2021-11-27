@@ -64,7 +64,6 @@ exports.generateWebTokens = async (req, res) => {
           exp2,
           function (error, token) {
             tokens.accessToken = token;
-            console.log(tokens);
             res.status(200).json(tokens);
           }
         );
