@@ -22,6 +22,8 @@ app.use('/register', require('./routes/register'));
 app.use('/token', require('./routes/token'));
 app.use('/user', require('./routes/user'));
 app.use('/users', require('./routes/users'));
+
+app.use('/test', () => res.status(200).json({ msg: 'Welcome to my api' }));
 app.use('/', Not_Found);
 
 module.exports = app;
