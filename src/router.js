@@ -3,7 +3,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const { Not_Found, Test } = require('./middlewares/validation');
+const { Not_Found } = require('./middlewares/validation');
 
 // Cors Enabled
 app.use((req, res, next) => {
@@ -22,10 +22,6 @@ app.use('/register', require('./routes/register'));
 app.use('/token', require('./routes/token'));
 app.use('/user', require('./routes/user'));
 app.use('/users', require('./routes/users'));
-
-app.use('/test', (req, res) => {
-  res.status(200).json({ msg: 'Welcome to my api' });
-});
 app.use('/', Not_Found);
 
 module.exports = app;
