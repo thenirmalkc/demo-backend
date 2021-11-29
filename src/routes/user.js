@@ -4,7 +4,7 @@ const router = require('express').Router();
 const model = require('../models/index');
 const controller = require('../controllers/user');
 const { Auth } = require('../middlewares/auth');
-const { ADMIN } = require('../utils/role');
+const { ADMIN } = require('../constants/role');
 
 const { Valid_Id, Doc_Exists } = require('../middlewares/validation');
 

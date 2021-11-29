@@ -1,7 +1,7 @@
 'use strict';
 
 const model = require('../models/index');
-const formatError = require('../utils/formatError');
+const formatError = require('../helpers/formatError');
 
 exports.createItem = async (req, res) => {
   try {

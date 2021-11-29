@@ -11,6 +11,7 @@ app.use((req, res, next) => {
   next();
 });
 
+// Middlewares
 app.use(express.json()); // JSON
 app.use(bodyParser.urlencoded({ extended: false })); // Body Parser
 

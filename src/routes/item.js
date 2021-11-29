@@ -4,7 +4,7 @@ const router = require('express').Router();
 const model = require('../models/index');
 const controller = require('../controllers/item');
 const { Auth } = require('../middlewares/auth'); // Authorization
-const { USER } = require('../utils/role');
+const { USER } = require('../constants/role');
 const {
   Valid_Id,
   Doc_Exists,

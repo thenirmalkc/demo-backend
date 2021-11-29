@@ -1,7 +1,7 @@
 'use strict';
 
 const model = require('../models/index');
-const formatError = require('../utils/formatError');
+const formatError = require('../helpers/formatError');
 
 exports.createUser = async (req, res) => {
   try {
@@ -30,7 +30,7 @@ exports.updateUser = async (req, res) => {
       'webToken',
       'mobileToken'
     ];
-    deleteFields.map((field) => delete req.body[field]);
+    deleteFields.map(field => delete req.body[field]);
     await model.User.updateOne({ _id: req.user.id }, req.body, {
       runValidators: true
     });
