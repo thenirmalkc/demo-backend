@@ -1,8 +1,8 @@
 'use strict';
 
-const model = require('../models/index');
-const formatError = require('../helpers/formatError');
-const { USER } = require('../constants/role');
+const model = require('@models/index');
+const formatError = require('@helpers/formatError');
+const { USER } = require('@constants/role');
 
 exports.registerUser = async (req, res, next) => {
   try {

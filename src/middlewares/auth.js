@@ -2,7 +2,7 @@
 
 const jwt = require('jsonwebtoken');
 
-const model = require('../models/index');
+const model = require('@models/index');
 
 // -- For Web Tokens --
 // Refresh token

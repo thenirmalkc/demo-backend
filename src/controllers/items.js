@@ -1,6 +1,6 @@
 'use strict';
 
-const model = require('../models/index');
+const model = require('@models/index');
 
 exports.getItems = async (req, res) => {
   try {

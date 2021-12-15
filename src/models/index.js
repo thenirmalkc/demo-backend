@@ -23,7 +23,7 @@ const model = {};
 for (let i = 0; i < files.length; i++) {
   if (files[i] == 'index.js') continue;
   else {
-    const obj = require('./' + files[i]);
+    const obj = require('@models/' + files[i]);
     model[obj.collection.modelName] = obj;
   }
 }

@@ -3,7 +3,7 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const { ADMIN, SUPER_ADMIN, USER } = require('../constants/role');
+const { ADMIN, SUPER_ADMIN, USER } = require('@constants/role');
 
 const UserSchema = new Schema(
   {

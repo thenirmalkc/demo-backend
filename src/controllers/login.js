@@ -1,7 +1,7 @@
 'use strict';
 
 const bcrypt = require('bcrypt');
-const model = require('../models/index');
+const model = require('@models/index');
 
 exports.loginUser = async (req, res, next) => {
   try {

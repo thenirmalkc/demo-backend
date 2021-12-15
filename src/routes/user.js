@@ -1,12 +1,12 @@
 'use strict';
 
 const router = require('express').Router();
-const model = require('../models/index');
-const controller = require('../controllers/user');
-const { Auth } = require('../middlewares/auth');
-const { ADMIN } = require('../constants/role');
+const model = require('@models/index');
+const controller = require('@controllers/user');
+const { Auth } = require('@middlewares/auth');
+const { ADMIN } = require('@constants/role');
 
-const { Valid_Id, Doc_Exists } = require('../middlewares/validation');
+const { Valid_Id, Doc_Exists } = require('@middlewares/validation');
 
 router.post('/', Auth(ADMIN), controller.createUser);
 router.put('/', Auth(), controller.updateUser);
